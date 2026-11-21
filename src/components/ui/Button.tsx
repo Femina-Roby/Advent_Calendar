@@ -4,23 +4,21 @@ type Variant = "primary" | "glass" | "quiet" | "letter";
 type Size = "md" | "sm" | "icon";
 
 const base =
-  "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap font-medium transition-[transform,background,box-shadow,border-color,color] duration-300 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-40";
+  "inline-flex shrink-0 items-center justify-center gap-2.5 whitespace-nowrap font-medium transition-[background,border-color,color,transform] duration-200 active:translate-y-px disabled:pointer-events-none disabled:opacity-40";
 
 const variants: Record<Variant, string> = {
-  // Warm lantern gold, the one action that matters on a screen.
-  primary:
-    "rounded-full bg-[linear-gradient(180deg,var(--gold-bright),var(--gold))] text-[#2a1d08] shadow-[0_8px_24px_-8px_rgb(226_184_98/0.7),inset_0_1px_0_rgb(255_255_255/0.55)] hover:brightness-105",
-  glass:
-    "rounded-full border border-[var(--hairline-soft)] bg-white/[0.06] text-cream backdrop-blur-md hover:border-[var(--hairline)] hover:bg-white/[0.1]",
-  quiet: "rounded-full text-dim hover:text-cream",
+  // The one action that matters on a screen: flat lantern gold, nothing glossy.
+  primary: "rounded-[10px] bg-gold font-semibold text-[#1d1506] hover:bg-gold-bright",
+  // Outlined, for the second choice.
+  glass: "rounded-[10px] border border-cream/30 text-cream hover:border-gold hover:text-gold-bright",
+  quiet: "rounded-[10px] text-dim hover:bg-white/[0.06] hover:text-cream",
   // Buttons that sit on warm paper.
-  letter:
-    "rounded-full border border-[#22332a]/15 bg-[#22332a]/[0.05] text-paper-ink hover:bg-[#22332a]/[0.1]",
+  letter: "rounded-[10px] border border-[#22332a]/30 text-paper-ink hover:border-[#22332a]/60 hover:bg-[#22332a]/[0.05]",
 };
 
 const sizes: Record<Size, string> = {
-  md: "h-12 px-7 text-[0.95rem]",
-  sm: "h-10 px-5 text-sm",
+  md: "h-12 px-6 text-[0.95rem] tracking-[0.005em]",
+  sm: "h-10 px-4 text-sm",
   icon: "size-11",
 };
 

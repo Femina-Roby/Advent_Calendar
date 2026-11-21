@@ -3,8 +3,8 @@
 import Link from "next/link";
 import premade from "@/fixtures/premade.json";
 import { btn } from "./ui/Button";
-import { ArrowRightIcon, SparkleIcon } from "./ui/icons";
-import { StarLantern } from "./ui/StarLantern";
+import { ArrowRightIcon } from "./ui/icons";
+import { Wordmark } from "./ui/Wordmark";
 import SceneLoader from "./scene/SceneLoader";
 
 const noop = () => {};
@@ -25,9 +25,8 @@ export function LandingHero() {
         aria-hidden
       />
 
-      <header className="relative z-10 flex items-center gap-3 px-6 pt-6 md:px-12 md:pt-9">
-        <StarLantern size={30} />
-        <span className="eyebrow !text-cream/80">Kettuvallam Advent</span>
+      <header className="relative z-10 px-6 pt-6 md:px-12 md:pt-9">
+        <Wordmark />
       </header>
 
       <section className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col justify-end px-6 pb-14 md:justify-center md:px-12 md:pb-0">
@@ -45,15 +44,15 @@ export function LandingHero() {
               <ArrowRightIcon />
             </Link>
             <Link href="/make" className={btn("glass", "md")}>
-              <SparkleIcon />
               Make one for someone
             </Link>
           </div>
         </div>
       </section>
 
-      <footer className="relative z-10 px-6 pb-6 text-xs tracking-wide text-faint md:absolute md:bottom-6 md:left-12 md:p-0">
-        Made for Hackathoni · Alappuzha, 2026
+      <footer className="relative z-10 mx-6 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-1 border-t border-cream/15 py-5 text-sm md:absolute md:inset-x-12 md:bottom-0 md:mx-0">
+        <p className="font-serif text-dim italic">Made in Kerala for Hackathoni, 2026.</p>
+        <p className="text-dim/80 tabular-nums">Alappuzha &middot; 9.49&deg; N, 76.34&deg; E</p>
       </footer>
     </main>
   );

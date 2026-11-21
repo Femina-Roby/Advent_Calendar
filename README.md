@@ -1,6 +1,8 @@
 # Kettuvallam Advent
 
-An advent calendar set on a Kerala houseboat that freezes into winter as you open its 24 doors. Anyone can open the premade calendar from a link. Signed-in senders can make their own, drafted with Sarvam AI, and share it with someone who needs no account.
+**Live site: https://createadventcalendar.vercel.app/**
+
+An advent calendar set on a Kerala houseboat that freezes into winter as you open its 24 doors. Anyone can open the premade calendar from a link. Anyone can also make one for someone: fill the 24 objects with a message, a link and a photo, and share a single link. The person who receives it needs no account.
 
 Built for Hackathoni (Devin and TinkerHub, Alappuzha, 21 to 22 November 2026).
 
@@ -34,7 +36,7 @@ the page load an arbitrary address.
 
 ## How it is built
 
-Stack: Next.js, Supabase, react-three-fiber, Sarvam AI. Planning and build notes are tracked in `SPEC.md` and `CLAUDE.md`.
+Stack: Next.js, react-three-fiber (the 3D scene), Supabase (photo storage only). Planning and build notes are tracked in `SPEC.md` and `CLAUDE.md`.
 
 ## Credits
 

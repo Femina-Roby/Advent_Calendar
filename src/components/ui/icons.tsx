@@ -39,10 +39,15 @@ export const RestartIcon = (p: P) => (
     <path d="M4.5 4.5v4h4" />
   </Icon>
 );
-export const SparkleIcon = (p: P) => (
+export const PencilIcon = (p: P) => (
   <Icon {...p}>
-    <path d="M11 3.5l1.7 4.8 4.8 1.7-4.8 1.7L11 16.5l-1.7-4.8L4.5 10l4.8-1.7z" />
-    <path d="M18.5 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" />
+    <path d="M4 20l1-4.2L16.6 4.2a1.9 1.9 0 0 1 2.7 0l.5.5a1.9 1.9 0 0 1 0 2.7L8.2 19z" />
+    <path d="M14.5 6.3l3.2 3.2" />
+  </Icon>
+);
+export const LinesIcon = (p: P) => (
+  <Icon {...p}>
+    <path d="M4 6.5h16M4 11.5h16M4 16.5h9" />
   </Icon>
 );
 export const CameraIcon = (p: P) => (

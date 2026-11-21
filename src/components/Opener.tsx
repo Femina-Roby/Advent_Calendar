@@ -13,7 +13,7 @@ import { DOOR_COUNT, type PublicCalendar } from "@/lib/schema";
 import SceneLoader from "./scene/SceneLoader";
 import { Button, btn } from "./ui/Button";
 import { DoorPanel } from "./ui/DoorPanel";
-import { CompassIcon, RestartIcon, SparkleIcon } from "./ui/icons";
+import { ArrowRightIcon, CompassIcon, PencilIcon, RestartIcon } from "./ui/icons";
 import { StarLantern } from "./ui/StarLantern";
 import { Toast } from "./ui/Toast";
 
@@ -116,11 +116,11 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
         <>
           {/* Top bar: who it is for, and how far along. */}
           <div className="anim-fade pointer-events-none absolute inset-x-0 top-0 z-10 flex items-start justify-between p-4 md:p-6">
-            <div className="glass flex items-center gap-3 rounded-full py-2 pr-5 pl-3">
+            <div className="glass flex items-center gap-3 rounded-xl py-2 pr-5 pl-3">
               <StarLantern size={26} />
               <h1 className="font-serif text-lg leading-none text-cream">{copy.scene.forName(calendar.recipientName)}</h1>
             </div>
-            <div className="glass flex items-center gap-2.5 rounded-full py-1.5 pr-4 pl-2" aria-label={copy.scene.progress(opened)}>
+            <div className="glass flex items-center gap-2.5 rounded-xl py-1.5 pr-4 pl-2" aria-label={copy.scene.progress(opened)}>
               <StarLantern size={34} progress={opened} />
               <p className="font-serif text-lg leading-none tabular-nums text-cream">
                 {pad(opened)}
@@ -142,8 +142,8 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
               ) : null}
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Link href="/make" className={btn("primary", "md")}>
-                  <SparkleIcon />
                   {copy.finale.cta}
+                  <ArrowRightIcon />
                 </Link>
                 <Button variant="glass" onClick={reset}>
                   {copy.scene.startOver}
@@ -157,7 +157,7 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
             aria-label="Calendar controls"
             className="anim-fade pointer-events-none fixed inset-x-0 bottom-0 z-20 flex justify-center px-3 pb-[max(1rem,env(safe-area-inset-bottom))]"
           >
-            <div className="glass glass-gold pointer-events-auto flex items-center gap-1 rounded-full p-1.5">
+            <div className="glass glass-gold pointer-events-auto flex items-center gap-1 rounded-2xl p-1.5">
               {!finished ? (
                 <Button onClick={() => handleDoor(next)}>{copy.scene.openDoor(next)}</Button>
               ) : null}
@@ -170,7 +170,7 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
                 <RestartIcon />
               </Button>
               <Link href="/make" className={btn("quiet", "icon")} aria-label={copy.scene.makeYourOwn} title={copy.scene.makeYourOwn}>
-                <SparkleIcon />
+                <PencilIcon />
               </Link>
             </div>
           </nav>

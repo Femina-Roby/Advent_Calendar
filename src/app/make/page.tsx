@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Button, btn } from "@/components/ui/Button";
 import {
@@ -9,12 +8,13 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   CopyIcon,
+  LinesIcon,
   LinkIcon,
   ShareIcon,
-  SparkleIcon,
   TrashIcon,
 } from "@/components/ui/icons";
 import { StarLantern } from "@/components/ui/StarLantern";
+import { Wordmark } from "@/components/ui/Wordmark";
 import { copy } from "@/lib/copy";
 import { GIFTS, GIFT_OPENS } from "@/lib/gifts";
 import { type MakerDraft, useMakerDraft } from "@/lib/maker-draft";
@@ -40,10 +40,7 @@ const box =
 function Header({ step }: { step: Step }) {
   return (
     <header className="flex flex-wrap items-center justify-between gap-4">
-      <Link href="/" className="flex items-center gap-3" aria-label="Kettuvallam Advent, home">
-        <StarLantern size={30} />
-        <span className="eyebrow !text-cream/80">Kettuvallam Advent</span>
-      </Link>
+      <Wordmark />
       <ol className="flex items-center gap-3" aria-label="Progress">
         {copy.maker.steps.map((name, i) => (
           <li key={name} aria-current={i === step ? "step" : undefined} className="flex items-center gap-3">
@@ -230,7 +227,7 @@ function DoorsStep({ draft, update, onBack, onNext }: { draft: MakerDraft; updat
             variant="glass"
             size="sm"
             className="mt-4"
-            icon={<SparkleIcon width={16} height={16} />}
+            icon={<LinesIcon width={16} height={16} />}
             onClick={() =>
               update((d) => ({
                 ...d,
@@ -407,7 +404,7 @@ function ShareStep({ draft, onBack, onNew }: { draft: MakerDraft; onBack: () => 
       {error ? (
         <p className="mt-8 text-[#ff9b8f]">Something is too long to fit in a link. Shorten a message and try again.</p>
       ) : (
-        <div className="glass glass-gold mt-10 flex items-center gap-2 rounded-full p-1.5 pl-6">
+        <div className="glass glass-gold mt-10 flex items-center gap-2 rounded-xl p-1.5 pl-5">
           <input
             id="share-link"
             readOnly
