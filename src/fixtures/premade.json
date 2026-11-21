@@ -1,0 +1,179 @@
+{
+  "slug": "premade",
+  "title": "Christmas on a Houseboat",
+  "recipientName": "Anu",
+  "closingNote": "Placeholder closing note. Replace with your own words.",
+  "occasion": "Christmas",
+  "theme": "kettuvallam",
+  "language": "en",
+  "doors": [
+    {
+      "number": 1,
+      "body": "PLACEHOLDER. Welcome aboard. The backwaters are warm tonight and the lanterns are lit.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-01.svg",
+      "source": "manual"
+    },
+    {
+      "number": 2,
+      "body": "PLACEHOLDER. The palms lean over the water. Someone left you a small thing on the deck.",
+      "linkUrl": "https://example.com/gift-2",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 3,
+      "body": "PLACEHOLDER. A song for the evening.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-03.svg",
+      "source": "manual"
+    },
+    {
+      "number": 4,
+      "body": "PLACEHOLDER. Tea is better when the water is still.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-04.svg",
+      "source": "manual"
+    },
+    {
+      "number": 5,
+      "body": "PLACEHOLDER. The last of the warm light is going.",
+      "linkUrl": "https://example.com/gift-5",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 6,
+      "body": "PLACEHOLDER. A cooler breeze comes in from the east.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-06.svg",
+      "source": "manual"
+    },
+    {
+      "number": 7,
+      "body": "PLACEHOLDER. Mist is rising off the water.",
+      "linkUrl": "https://example.com/gift-7",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 8,
+      "body": "PLACEHOLDER. Something to read while the light turns blue.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-08.svg",
+      "source": "manual"
+    },
+    {
+      "number": 9,
+      "body": "PLACEHOLDER. The lanterns look brighter now.",
+      "linkUrl": "https://example.com/gift-9",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 10,
+      "body": "PLACEHOLDER. Write someone a message tonight.",
+      "linkUrl": "https://example.com/gift-10",
+      "photoPath": "/placeholders/gift-10.svg",
+      "source": "manual"
+    },
+    {
+      "number": 11,
+      "body": "PLACEHOLDER. The frogs have gone quiet. Listen.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-11.svg",
+      "source": "manual"
+    },
+    {
+      "number": 12,
+      "body": "PLACEHOLDER. Halfway. The first thin ice shows at the edges.",
+      "linkUrl": "https://example.com/gift-12",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 13,
+      "body": "PLACEHOLDER. A photo for you.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-13.svg",
+      "source": "manual"
+    },
+    {
+      "number": 14,
+      "body": "PLACEHOLDER. Snow on the thatch for the first time.",
+      "linkUrl": "https://example.com/gift-14",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 15,
+      "body": "PLACEHOLDER. Hold the cup with both hands.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-15.svg",
+      "source": "manual"
+    },
+    {
+      "number": 16,
+      "body": "PLACEHOLDER. The ice is thicker today.",
+      "linkUrl": "https://example.com/gift-16",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 17,
+      "body": "PLACEHOLDER. Another lantern goes up along the rail.",
+      "linkUrl": "https://example.com/gift-17",
+      "photoPath": "/placeholders/gift-17.svg",
+      "source": "manual"
+    },
+    {
+      "number": 18,
+      "body": "PLACEHOLDER. The water is frozen solid. The boat is locked in.",
+      "linkUrl": "https://example.com/gift-18",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 19,
+      "body": "PLACEHOLDER. Something is pushing up through the ice.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-19.svg",
+      "source": "manual"
+    },
+    {
+      "number": 20,
+      "body": "PLACEHOLDER. Little trees, all in a row.",
+      "linkUrl": "https://example.com/gift-20",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 21,
+      "body": "PLACEHOLDER. Snow keeps falling, softly.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-21.svg",
+      "source": "manual"
+    },
+    {
+      "number": 22,
+      "body": "PLACEHOLDER. Nearly there. Look back at how far you have come.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-22.svg",
+      "source": "manual"
+    },
+    {
+      "number": 23,
+      "body": "PLACEHOLDER. One more door. Be still for a minute.",
+      "linkUrl": "https://example.com/gift-23",
+      "photoPath": null,
+      "source": "manual"
+    },
+    {
+      "number": 24,
+      "body": "PLACEHOLDER. The star is lit. Thank you for opening every door.",
+      "linkUrl": null,
+      "photoPath": "/placeholders/gift-24.svg",
+      "source": "manual"
+    }
+  ]
+}
