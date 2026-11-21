@@ -16,7 +16,7 @@ Commands: `npm run build`, `npm run typecheck`, `npm run lint`, `npm test`.
 
 ## Status
 
-Work in progress. See `SPEC.md` for the plan and ticket list. `/kit` shows the style kit.
+See `SPEC.md` for the plan and `CONTENT.md` for what the premade calendar still needs from its author.
 
 ## Making a calendar, and photos
 

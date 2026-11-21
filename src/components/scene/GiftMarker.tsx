@@ -3,8 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import type { GiftState } from "@/components/ui/GiftTag";
-import type { GiftSpec } from "@/lib/gifts";
+import type { GiftSpec, GiftState } from "@/lib/gifts";
 import { RevealItem } from "./GiftBox";
 import { photoUrl } from "@/lib/storage";
 import { KINDS } from "./GiftKinds";
@@ -94,10 +93,12 @@ type Props = {
   onClick: (n: number) => void;
   /** What is inside: decides whether a polaroid, an envelope or a wrapped present floats out. */
   door?: { photoPath: string | null; linkUrl: string | null };
+  /** Scenery only: no number tag, no glow, not clickable. */
+  decorative?: boolean;
 };
 
 /** One gift: its own object, a number tag, a glow when it is next, and a wrapped present once opened. */
-export function GiftMarker({ number, spec, state, wobbleTick, onClick, door }: Props) {
+export function GiftMarker({ number, spec, state, wobbleTick, onClick, door, decorative = false }: Props) {
   const open = useRef(state === "opened" ? 1 : 0);
   const root = useRef<THREE.Group>(null);
   const reveal = useRef<THREE.Group>(null);
@@ -106,7 +107,7 @@ export function GiftMarker({ number, spec, state, wobbleTick, onClick, door }: P
   const tag = useRef<THREE.Sprite>(null);
   const wobbleStart = useRef(-1);
   const font = useTagFont();
-  const tex = useMemo(() => (font ? makeTagTexture(number, state, font) : null), [font, number, state]);
+  const tex = useMemo(() => (font && !decorative ? makeTagTexture(number, state, font) : null), [font, number, state, decorative]);
   const glowTex = useMemo(() => makeGlowTexture(), []);
   const Kind = KINDS[spec.kind];
 
@@ -133,7 +134,7 @@ export function GiftMarker({ number, spec, state, wobbleTick, onClick, door }: P
 
     if (halo.current) {
       // Every unopened gift shimmers faintly so it can be spotted; the next one glows and pulses.
-      halo.current.visible = state !== "opened";
+      halo.current.visible = !decorative && state !== "opened";
       halo.current.material.opacity = state === "next" ? 0.85 : 0.3;
       halo.current.scale.setScalar(state === "next" ? 1.0 + Math.sin(t * 3) * 0.18 : 0.8 + Math.sin(t * 1.6 + number) * 0.08);
     }
@@ -187,6 +188,7 @@ export function GiftMarker({ number, spec, state, wobbleTick, onClick, door }: P
       </sprite>
 
       {/* Click area, larger than the object so small things are easy to tap. */}
+      {decorative ? null : (
       <mesh
         position={[0, spec.hy, 0]}
         onClick={fire}
@@ -196,6 +198,7 @@ export function GiftMarker({ number, spec, state, wobbleTick, onClick, door }: P
         <sphereGeometry args={[spec.hr, 10, 8]} />
         <meshBasicMaterial transparent opacity={0} depthWrite={false} colorWrite={false} />
       </mesh>
+      )}
 
       {/* Number tag: constant size on screen, so it stays readable at any distance. The next one is always on top. */}
       {tex ? (

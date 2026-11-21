@@ -3,7 +3,9 @@ export const copy = {
   appName: "Kettuvallam Advent",
   intro: {
     title: (name: string) => `A calendar for ${name}`,
+    eyebrow: "Twenty-four doors",
     begin: "Begin",
+    hint: "Open one door at a time, in order, at your own pace.",
     continueAt: (n: number) => `Continue at door ${n}`,
   },
   scene: {

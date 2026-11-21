@@ -11,21 +11,29 @@ const inter = localFont({
 });
 
 const fraunces = localFont({
-  src: "../fonts/fraunces-latin-wght-normal.woff2",
+  src: [
+    { path: "../fonts/fraunces-latin-wght-normal.woff2", style: "normal", weight: "100 900" },
+    { path: "../fonts/fraunces-latin-wght-italic.woff2", style: "italic", weight: "100 900" },
+  ],
   variable: "--font-fraunces",
-  weight: "100 900",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Kettuvallam Advent",
-  description: "Twenty-four doors on a Kerala houseboat that freezes into winter.",
+  title: { default: "Kettuvallam Advent", template: "%s · Kettuvallam Advent" },
+  description:
+    "Twenty-four doors on a Kerala houseboat. A warm backwater night that slowly freezes into a snowy, lantern-lit Christmas. Open them in order, or make one for someone you love.",
+  openGraph: {
+    title: "Kettuvallam Advent",
+    description: "Twenty-four doors on a Kerala houseboat, and a backwater that turns to winter.",
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f6eedc",
+  themeColor: "#070e1d",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,107 +1,165 @@
 @import "tailwindcss";
 
-/* Design tokens: warm paper, deep green, gold, coir brown, lantern amber.
-   The UI chrome stays warm in every freeze stage so it always feels like a gift. */
+/*
+  Design system: a Kerala backwater at night. Deep blue-black, warm lantern gold, paper for anything written.
+  Glass sits over the 3D scene; "letters" (warm paper) hold the messages people actually read.
+*/
 :root {
-  color-scheme: light;
-  --paper: #f6eedc;
-  --paper-2: #efe3c8;
-  --paper-3: #e4d4b0;
-  --ink: #1d3a2d;
-  --ink-soft: #4a5f54;
-  --green: #1e4d3a;
-  --green-deep: #143528;
-  --gold: #c9a24b;
-  --gold-soft: #e7cf8e;
-  --coir: #7a5a3a;
+  color-scheme: dark;
+  --night: #070e1d;
+  --night-2: #0d1830;
+  --night-3: #15244a;
+  --cream: #f3ead6;
+  --dim: #aeb8cc;
+  --faint: #7f8aa3;
+  --gold: #e2b862;
+  --gold-bright: #f6d98f;
+  --gold-deep: #b98a3a;
   --lantern: #f2a93b;
-  --ice: #bfd9e6;
-  --night: #14212b;
-  --radius: 14px;
-  --shadow: 0 10px 30px -12px rgb(20 33 43 / 0.45);
+  --berry: #c4453b;
+  --pine: #1f5a42;
+  --hairline: rgb(226 184 98 / 0.3);
+  --hairline-soft: rgb(243 234 214 / 0.12);
+  --paper: #f6eedc;
+  --paper-2: #eadfc4;
+  --paper-ink: #22332a;
+  --paper-dim: #6b6a58;
   --ease: cubic-bezier(0.22, 0.8, 0.28, 1);
+  /* Aliases used by the star lantern drawing. */
+  --paper-3: #d9c9a3;
+  --gold-soft: #f1d9a0;
+  --coir: #7a5a3a;
 }
 
 @theme inline {
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-night-3: var(--night-3);
+  --color-cream: var(--cream);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-deep: var(--gold-deep);
+  --color-lantern: var(--lantern);
+  --color-berry: var(--berry);
+  --color-pine: var(--pine);
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
-  --color-paper-3: var(--paper-3);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-green: var(--green);
-  --color-green-deep: var(--green-deep);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
-  --color-coir: var(--coir);
-  --color-lantern: var(--lantern);
-  --color-ice: var(--ice);
-  --color-night: var(--night);
+  --color-paper-ink: var(--paper-ink);
+  --color-paper-dim: var(--paper-dim);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-fraunces);
 }
 
 html,
 body {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--night);
+  color: var(--cream);
   font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A night sky behind the pages that are not the 3D scene. */
+.sky-backdrop {
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgb(255 255 255 / 0.9) 99%, transparent),
+    radial-gradient(1px 1px at 28% 64%, rgb(255 244 214 / 0.7) 99%, transparent),
+    radial-gradient(1.5px 1.5px at 44% 22%, rgb(255 255 255 / 0.85) 99%, transparent),
+    radial-gradient(1px 1px at 61% 48%, rgb(190 214 255 / 0.8) 99%, transparent),
+    radial-gradient(1.5px 1.5px at 76% 14%, rgb(255 255 255 / 0.9) 99%, transparent),
+    radial-gradient(1px 1px at 88% 58%, rgb(255 244 214 / 0.7) 99%, transparent),
+    radial-gradient(1px 1px at 8% 82%, rgb(190 214 255 / 0.7) 99%, transparent),
+    radial-gradient(1px 1px at 52% 86%, rgb(255 255 255 / 0.6) 99%, transparent),
+    radial-gradient(1.5px 1.5px at 93% 88%, rgb(255 255 255 / 0.8) 99%, transparent),
+    radial-gradient(120% 70% at 50% -10%, #17295a 0%, transparent 62%),
+    linear-gradient(180deg, var(--night-2) 0%, var(--night) 70%);
+  background-attachment: fixed;
 }
 
 h1,
 h2,
-h3 {
+h3,
+.display {
   font-family: var(--font-fraunces), Georgia, serif;
-  letter-spacing: -0.01em;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
 }
 
-/* Kasavu trim: cream with a thin gold stripe, used on cards, panels and focus rings. */
-.kasavu {
-  background: var(--paper);
-  border: 1px solid var(--paper-3);
-  border-radius: var(--radius);
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Frosted glass over the 3D scene. */
+.glass {
+  background: linear-gradient(180deg, rgb(22 36 66 / 0.62), rgb(9 17 36 / 0.74));
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  backdrop-filter: blur(16px) saturate(1.25);
+  border: 1px solid var(--hairline-soft);
   box-shadow:
-    inset 0 0 0 4px var(--paper),
-    inset 0 0 0 5px var(--gold),
-    var(--shadow);
+    0 24px 60px -24px rgb(0 0 0 / 0.75),
+    inset 0 1px 0 rgb(255 255 255 / 0.07);
+}
+
+.glass-gold {
+  border-color: var(--hairline);
+}
+
+/* A letter: warm paper for the messages. */
+.letter {
+  color: var(--paper-ink);
+  background:
+    radial-gradient(130% 90% at 15% 0%, #fcf7ea 0%, #f2e7cb 100%);
+  box-shadow:
+    0 30px 70px -28px rgb(0 0 0 / 0.8),
+    0 2px 0 rgb(255 255 255 / 0.5) inset;
+}
+.letter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .32  0 0 0 0 .18  0 0 0 .28 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.letter > * {
+  position: relative;
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--gold-bright);
   outline-offset: 3px;
+}
+
+/* Text fields show focus with their own gold underline or border, not a box. */
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+::selection {
+  background: rgb(226 184 98 / 0.35);
 }
 
 @keyframes next-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgb(242 169 59 / 0.55);
+    box-shadow: 0 0 0 0 rgb(242 169 59 / 0.5);
   }
   50% {
     box-shadow: 0 0 0 10px rgb(242 169 59 / 0);
   }
 }
 
-@keyframes wobble {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-  20% {
-    transform: rotate(-6deg);
-  }
-  40% {
-    transform: rotate(5deg);
-  }
-  60% {
-    transform: rotate(-3deg);
-  }
-  80% {
-    transform: rotate(2deg);
-  }
-}
-
-@keyframes slide-in {
+@keyframes rise {
   from {
-    transform: translateY(12px);
+    transform: translateY(14px);
     opacity: 0;
   }
   to {
@@ -110,20 +168,44 @@ h3 {
   }
 }
 
-.anim-next {
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sheet {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.anim-rise {
+  animation: rise 0.7s var(--ease) both;
+}
+.anim-fade {
+  animation: fade 0.9s var(--ease) both;
+}
+.anim-sheet {
+  animation: sheet 0.5s var(--ease) both;
+}
+.anim-glow {
   animation: next-glow 1.8s ease-out infinite;
-}
-.anim-wobble {
-  animation: wobble 0.5s var(--ease);
-}
-.anim-slide-in {
-  animation: slide-in 0.45s var(--ease) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .anim-next,
-  .anim-wobble,
-  .anim-slide-in {
+  .anim-rise,
+  .anim-fade,
+  .anim-sheet,
+  .anim-glow {
     animation: none;
   }
 }

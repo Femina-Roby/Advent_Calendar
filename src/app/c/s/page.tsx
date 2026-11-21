@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Opener } from "@/components/Opener";
+import { btn } from "@/components/ui/Button";
 import { StarLantern } from "@/components/ui/StarLantern";
 import { copy } from "@/lib/copy";
 import type { PublicCalendar } from "@/lib/schema";
@@ -27,14 +28,14 @@ export default function SharedCalendarPage() {
   if (state.status === "ok") return <Opener calendar={state.calendar} />;
 
   return (
-    <main className="mx-auto grid min-h-screen w-full max-w-xl place-items-center px-4" aria-busy={state.status === "loading"}>
-      <div className="kasavu w-full p-8 text-center">
-        <StarLantern size={72} className={`mx-auto ${state.status === "loading" ? "animate-pulse" : ""}`} />
+    <main className="sky-backdrop grid min-h-screen place-items-center px-5" aria-busy={state.status === "loading"}>
+      <div className="glass glass-gold anim-rise w-full max-w-md rounded-3xl p-9 text-center">
+        <StarLantern size={64} lit={state.status === "loading"} className={`mx-auto ${state.status === "loading" ? "animate-pulse" : "opacity-60"}`} />
         {state.status === "bad" ? (
           <>
-            <h1 className="mt-4 text-2xl font-semibold">{copy.states.notReady}</h1>
-            <p className="mt-2 text-ink-soft">This link looks incomplete. Ask whoever sent it to share it again.</p>
-            <Link href="/" className="mt-6 inline-block underline">
+            <h1 className="mt-6 text-2xl font-light">{copy.states.notReady}</h1>
+            <p className="mt-3 text-dim">This link looks incomplete. Ask whoever sent it to share it again.</p>
+            <Link href="/" className={btn("glass", "md", "mt-7")}>
               Back to the start
             </Link>
           </>

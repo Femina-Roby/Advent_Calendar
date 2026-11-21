@@ -2,6 +2,9 @@ import { DECK_Y, RIDGE_Y, UP_Y, UP_X0 } from "./boat-dims";
 
 export type Vec3 = readonly [number, number, number];
 
+/** Where a gift is in the story: not yet reachable, the one to open next, or already opened. */
+export type GiftState = "locked" | "next" | "opened";
+
 /** Every gift is a different object that opens in its own way. */
 export type GiftKind =
   | "door"

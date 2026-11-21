@@ -7,7 +7,7 @@ import { StarLantern } from "@/components/ui/StarLantern";
 const SceneLoader = dynamic(() => import("./Scene"), {
   ssr: false,
   loading: () => (
-    <div className="grid h-full w-full place-items-center bg-paper">
+    <div className="sky-backdrop grid h-full w-full place-items-center">
       <StarLantern size={64} className="animate-pulse" />
     </div>
   ),

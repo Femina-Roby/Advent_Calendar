@@ -4,9 +4,8 @@ import { Suspense, useEffect, useMemo, useRef, useState, type ComponentRef, type
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import { GIFTS } from "@/lib/gifts";
+import { GIFTS, type GiftState } from "@/lib/gifts";
 import { sceneParams } from "@/lib/scene-params";
-import type { GiftState } from "@/components/ui/GiftTag";
 import { Boat } from "./Boat";
 import { Christmas } from "./Christmas";
 import { Lanterns, StarLantern3D } from "./Decor";
@@ -32,6 +31,8 @@ export type SceneProps = {
   camera?: { pos: [number, number, number]; target: [number, number, number] };
   /** The calendar's doors, so each opened gift can show its own photo or link. */
   doors?: readonly { photoPath: string | null; linkUrl: string | null }[];
+  /** Scenery for the landing page: the scene turns slowly, with no tags, and cannot be touched. */
+  decorative?: boolean;
 };
 
 type Goal = { pos: THREE.Vector3; target: THREE.Vector3 };
@@ -72,6 +73,20 @@ function CameraRig({
 }
 
 /** The boat rocks gently on the waves, and goes still as the ice locks it in. */
+/** On a tall, narrow screen widen the lens so the whole boat still fits. */
+function ResponsiveFov() {
+  useFrame((state) => {
+    const portrait = state.size.width / state.size.height < 0.9;
+    const target = portrait ? 66 : 42;
+    const cam = state.camera as THREE.PerspectiveCamera;
+    if (Math.abs(cam.fov - target) > 0.05) {
+      cam.fov += (target - cam.fov) * 0.2;
+      cam.updateProjectionMatrix();
+    }
+  });
+  return null;
+}
+
 function BoatRig({ ice, children }: { ice: number; children: ReactNode }) {
   const g = useRef<THREE.Group>(null);
   useFrame(({ clock }) => {
@@ -88,7 +103,7 @@ function BoatRig({ ice, children }: { ice: number; children: ReactNode }) {
 
 const MOON_LIGHT = MOON_POS.clone().multiplyScalar(0.6).toArray() as [number, number, number];
 
-export default function Scene({ progress, opened, onGiftClick, wobble, focus, camera, doors }: SceneProps) {
+export default function Scene({ progress, opened, onGiftClick, wobble, focus, camera, doors, decorative = false }: SceneProps) {
   const params = useMemo(() => sceneParams(progress), [progress]);
   const [auto, setAuto] = useState(true);
   const low = useMemo(() => isLowEnd(), []);
@@ -158,6 +173,7 @@ export default function Scene({ progress, opened, onGiftClick, wobble, focus, ca
           number={i + 1}
           spec={spec}
           door={doors?.[i]}
+          decorative={decorative}
           state={stateOf(i + 1)}
           wobbleTick={wobble?.n === i + 1 ? wobble.tick : 0}
           onClick={onGiftClick}
@@ -165,6 +181,7 @@ export default function Scene({ progress, opened, onGiftClick, wobble, focus, ca
       ))}
       </BoatRig>
 
+      <ResponsiveFov />
       <CameraRig focus={focus} goalRef={goal} controlsRef={controls} />
       <OrbitControls
         ref={controls}
@@ -174,8 +191,10 @@ export default function Scene({ progress, opened, onGiftClick, wobble, focus, ca
         minDistance={3}
         maxDistance={30}
         maxPolarAngle={Math.PI / 2 - 0.06}
-        autoRotate={auto && !focus && !camera}
-        autoRotateSpeed={0.6}
+        autoRotate={decorative || (auto && !focus && !camera)}
+        autoRotateSpeed={decorative ? 0.28 : 0.6}
+        enableRotate={!decorative}
+        enableZoom={!decorative}
         onStart={() => {
           setAuto(false);
           goal.current = null;

@@ -16,7 +16,7 @@ A web app with two halves. **Premade calendar:** a Kerala houseboat in 3D with 2
 Next.js (App Router, TS) on Vercel Hobby, Supabase (Google auth, Postgres, Storage), react-three-fiber + drei, zod, Sarvam `sarvam-105b` via server route. Fonts are local in `src/fonts`. Read `node_modules/next/dist/docs/` before using Next APIs (Next 16, see AGENTS.md).
 
 ## Routes
-`/` landing, `/kit` style kit, `/c/[slug]` recipient, `/c/premade` (bundled fixture, no DB), `/make` dashboard, `/make/[id]` editor, `/api/draft`.
+`/` landing, `/c/premade` (bundled fixture), `/c/s#...` (a calendar carried in its own link), `/make` (three-step maker). `/scene` is a developer-only viewer and returns 404 in production.
 
 ## Data model
 `calendars`: id, slug (unique, nanoid 14+), owner_id (null for premade), title, recipient_name, closing_note, relationship, about, occasion (default christmas), theme, language (default en), published, created_at.
@@ -39,7 +39,7 @@ RLS: owner full access; anon has no direct select; public read only through `get
 ## Tickets (one per session, each ends with its check and a redeploy)
 | # | Ticket | Check |
 |---|---|---|
-| T1 | Scaffold + `/kit` style page | Deploys, kit looks right on phone |
+| T1 | Scaffold + design system | Deploys, looks right on phone |
 | T2 | Types, zod schemas, fixtures | Fixture validates |
 | T3 | `get_calendar` RPC, RLS, schema.sql | Anon call returns published calendar only |
 | T4 | `useProgress` + opener + out-of-order refusal | Door 5 before 4 refused, reload keeps progress |
