@@ -85,7 +85,7 @@ function WhoStep({ draft, update, onNext }: { draft: MakerDraft; update: Update;
             maxLength={80}
             autoFocus
             onChange={(e) => update((d) => ({ ...d, recipientName: e.target.value }))}
-            placeholder="Anu"
+            placeholder="Femina"
           />
         </label>
         <label className="block">

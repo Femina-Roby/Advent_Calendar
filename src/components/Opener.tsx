@@ -8,6 +8,7 @@ import { tryOpen } from "@/lib/progress-core";
 import { useProgress } from "@/lib/progress";
 import { photoUrl } from "@/lib/storage";
 import { useTween } from "@/lib/use-tween";
+import { useVisitorName } from "@/lib/visitor-name";
 import { supportsWebGL } from "@/lib/webgl";
 import { DOOR_COUNT, type PublicCalendar } from "@/lib/schema";
 import SceneLoader from "./scene/SceneLoader";
@@ -22,7 +23,7 @@ type Refusal = { needed: number; target: number; tick: number };
 const pad = (n: number) => String(n).padStart(2, "0");
 
 /** Recipient experience: the 3D houseboat, opened one gift at a time, strictly in order. */
-export function Opener({ calendar }: { calendar: PublicCalendar }) {
+export function Opener({ calendar, askName = false }: { calendar: PublicCalendar; askName?: boolean }) {
   const { opened, ready, finished, advance, reset } = useProgress(calendar.slug);
   const progress = useTween(opened);
   const [started, setStarted] = useState(false);
@@ -31,6 +32,10 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
   const [refusal, setRefusal] = useState<Refusal | null>(null);
   const [focus, setFocus] = useState<{ n: number; tick: number } | null>(null);
   const [webgl] = useState(() => supportsWebGL());
+  const [typedName, setTypedName] = useVisitorName();
+  // The premade calendar asks who is opening it; a calendar someone made already names its recipient.
+  const name = askName ? typedName.trim() || "you" : calendar.recipientName;
+  const say = (text: string) => text.replaceAll("{name}", name);
 
   if (!ready) return <main className="sky-backdrop min-h-screen" aria-busy="true" />;
 
@@ -100,13 +105,35 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
             <StarLantern size={52} className="mx-auto" />
             <p className="eyebrow mt-7">{copy.intro.eyebrow}</p>
             <h1 className="mt-4 text-[2.75rem] leading-[1.06] font-light [text-shadow:0_2px_30px_rgb(0_0_0/0.55)] md:text-7xl">
-              A calendar for <em className="font-normal text-gold-bright">{calendar.recipientName}</em>
+              A calendar for <em className="font-normal text-gold-bright">{name}</em>
             </h1>
             {hasTitle ? <p className="mt-4 font-serif text-lg text-dim italic">{calendar.title}</p> : null}
             <div className="mx-auto my-8 h-px w-24 bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent" aria-hidden />
-            <Button onClick={begin} tabIndex={started ? -1 : 0}>
-              {resumeLabel}
-            </Button>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                begin();
+              }}
+              className="flex flex-col items-center"
+            >
+              {askName ? (
+                <label className="mb-7 block w-full max-w-xs">
+                  <span className="mb-1 block text-[0.7rem] font-semibold tracking-[0.2em] text-faint uppercase">Your name</span>
+                  <input
+                    value={typedName}
+                    onChange={(e) => setTypedName(e.target.value)}
+                    maxLength={40}
+                    autoComplete="given-name"
+                    placeholder="Femina"
+                    tabIndex={started ? -1 : 0}
+                    className="w-full border-0 border-b border-[var(--hairline)] bg-transparent py-2 text-center font-serif text-2xl text-cream placeholder:text-faint/60 transition-colors focus:border-gold focus:outline-none"
+                  />
+                </label>
+              ) : null}
+              <Button type="submit" tabIndex={started ? -1 : 0}>
+                {resumeLabel}
+              </Button>
+            </form>
             <p className="mt-5 text-sm text-faint">{copy.intro.hint}</p>
           </div>
         </div>
@@ -118,7 +145,7 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
           <div className="anim-fade pointer-events-none absolute inset-x-0 top-0 z-10 flex items-start justify-between p-4 md:p-6">
             <div className="glass flex items-center gap-3 rounded-xl py-2 pr-5 pl-3">
               <StarLantern size={26} />
-              <h1 className="font-serif text-lg leading-none text-cream">{copy.scene.forName(calendar.recipientName)}</h1>
+              <h1 className="font-serif text-lg leading-none text-cream">{copy.scene.forName(name)}</h1>
             </div>
             <div className="glass flex items-center gap-2.5 rounded-xl py-1.5 pr-4 pl-2" aria-label={copy.scene.progress(opened)}>
               <StarLantern size={34} progress={opened} />
@@ -138,7 +165,7 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
               <p className="eyebrow mt-6">The last door</p>
               <h2 className="mt-3 text-3xl font-light">{copy.finale.title}</h2>
               {calendar.closingNote ? (
-                <p className="mt-5 font-serif text-xl leading-relaxed text-cream/90 italic">{calendar.closingNote}</p>
+                <p className="mt-5 font-serif text-xl leading-relaxed text-cream/90 italic">{say(calendar.closingNote)}</p>
               ) : null}
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Link href="/make" className={btn("primary", "md")}>
@@ -179,7 +206,7 @@ export function Opener({ calendar }: { calendar: PublicCalendar }) {
             <DoorPanel
               number={door.number}
               label={GIFTS[door.number - 1].label}
-              body={door.body}
+              body={say(door.body)}
               linkUrl={door.linkUrl}
               photoUrl={photoUrl(door.photoPath)}
               onClose={() => setViewing(null)}

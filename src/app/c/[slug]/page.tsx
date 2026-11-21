@@ -12,7 +12,7 @@ async function CalendarContent({ params }: { params: PageProps<"/c/[slug]">["par
   const { slug } = await params;
   const calendar = await getCalendar(slug);
   if (!calendar) notFound();
-  return <Opener calendar={calendar} />;
+  return <Opener calendar={calendar} askName={slug === PREMADE_SLUG} />;
 }
 
 export default function CalendarPage({ params }: PageProps<"/c/[slug]">) {

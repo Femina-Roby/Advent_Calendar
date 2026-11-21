@@ -20,6 +20,12 @@ Commands: `npm run build`, `npm run typecheck`, `npm run lint`, `npm test`.
 
 See `SPEC.md` for the plan and `CONTENT.md` for what the premade calendar still needs from its author.
 
+## Editing the words
+
+- The opening note ("Before you begin", typed out on the landing page) lives in `src/lib/copy.ts` under `prologue`. Rewrite it in your own voice.
+- The premade calendar's messages, photos and links are in `src/fixtures/premade.json`. `CONTENT.md` lists exactly what is needed.
+- In a message, `{name}` becomes the name of whoever is opening the premade calendar.
+
 ## Making a calendar, and photos
 
 `/make` lets a sender fill all 24 objects (a message, an optional link, an optional photo from their device) and

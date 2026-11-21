@@ -4,6 +4,7 @@ import Link from "next/link";
 import premade from "@/fixtures/premade.json";
 import { btn } from "./ui/Button";
 import { ArrowRightIcon } from "./ui/icons";
+import { Prologue } from "./Prologue";
 import { Wordmark } from "./ui/Wordmark";
 import SceneLoader from "./scene/SceneLoader";
 
@@ -13,6 +14,7 @@ const noop = () => {};
 export function LandingHero() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-night">
+      <Prologue />
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <SceneLoader progress={24} opened={24} onGiftClick={noop} doors={premade.doors} decorative />
       </div>
@@ -50,8 +52,7 @@ export function LandingHero() {
         </div>
       </section>
 
-      <footer className="relative z-10 mx-6 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-1 border-t border-cream/15 py-5 text-sm md:absolute md:inset-x-12 md:bottom-0 md:mx-0">
-        <p className="font-serif text-dim italic">Made in Kerala for Hackathoni, 2026.</p>
+      <footer className="relative z-10 mx-6 flex justify-end border-t border-cream/15 py-5 text-sm md:absolute md:inset-x-12 md:bottom-0 md:mx-0">
         <p className="text-dim/80 tabular-nums">Alappuzha &middot; 9.49&deg; N, 76.34&deg; E</p>
       </footer>
     </main>

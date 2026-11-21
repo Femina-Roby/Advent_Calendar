@@ -1,176 +1,176 @@
 {
   "slug": "premade",
   "title": "Christmas on a Houseboat",
-  "recipientName": "Anu",
-  "closingNote": "Placeholder closing note. Replace with your own words.",
+  "recipientName": "Femina",
+  "closingNote": "Every door is open, {name}. The water has frozen, the lanterns are glowing, and the star is lit. Merry Christmas.",
   "occasion": "Christmas",
   "theme": "kettuvallam",
   "language": "en",
   "doors": [
     {
       "number": 1,
-      "body": "PLACEHOLDER. Welcome aboard. The backwaters are warm tonight and the lanterns are lit.",
+      "body": "Welcome aboard, {name}. The backwaters are warm tonight, and every lantern is lit for you.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-01.svg",
       "source": "manual"
     },
     {
       "number": 2,
-      "body": "PLACEHOLDER. The palms lean over the water. Someone left you a small thing on the deck.",
-      "linkUrl": "https://example.com/gift-2",
+      "body": "Open the shutters and look out. The palms lean over the water as if they were listening.",
+      "linkUrl": "https://en.wikipedia.org/wiki/Alappuzha",
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 3,
-      "body": "PLACEHOLDER. A song for the evening.",
+      "body": "Tea is better when the water is still. Pour a cup and stay a while.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-03.svg",
       "source": "manual"
     },
     {
       "number": 4,
-      "body": "PLACEHOLDER. Tea is better when the water is still.",
+      "body": "One small light is enough to find your way. This one is yours.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-04.svg",
       "source": "manual"
     },
     {
       "number": 5,
-      "body": "PLACEHOLDER. The last of the warm light is going.",
-      "linkUrl": "https://example.com/gift-5",
+      "body": "Some things are kept for exactly the right moment. This was one of them.",
+      "linkUrl": null,
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 6,
-      "body": "PLACEHOLDER. A cooler breeze comes in from the east.",
+      "body": "If the world ever feels too deep, hold on to the people who would swim out to you.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-06.svg",
       "source": "manual"
     },
     {
       "number": 7,
-      "body": "PLACEHOLDER. Mist is rising off the water.",
-      "linkUrl": "https://example.com/gift-7",
+      "body": "Roll the blind up. The evening has changed colour while you were busy.",
+      "linkUrl": "https://en.wikipedia.org/wiki/Kettuvallam",
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 8,
-      "body": "PLACEHOLDER. Something to read while the light turns blue.",
+      "body": "A letter, just for you. It says what it always says: I am glad you exist.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-08.svg",
       "source": "manual"
     },
     {
       "number": 9,
-      "body": "PLACEHOLDER. The lanterns look brighter now.",
-      "linkUrl": "https://example.com/gift-9",
+      "body": "Something warm from the kitchen. It smells like home, doesn't it?",
+      "linkUrl": null,
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 10,
-      "body": "PLACEHOLDER. Write someone a message tonight.",
-      "linkUrl": "https://example.com/gift-10",
-      "photoPath": "/placeholders/gift-10.svg",
+      "body": "Lift the lid. Steam, and the first good thing of the week.",
+      "linkUrl": "https://en.wikipedia.org/wiki/Christmas_in_India",
+      "photoPath": null,
       "source": "manual"
     },
     {
       "number": 11,
-      "body": "PLACEHOLDER. The frogs have gone quiet. Listen.",
+      "body": "A basket of small joys. Take one now and save the rest.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-11.svg",
       "source": "manual"
     },
     {
       "number": 12,
-      "body": "PLACEHOLDER. Halfway. The first thin ice shows at the edges.",
-      "linkUrl": "https://example.com/gift-12",
+      "body": "Cast a net wide enough and the day brings something kind.",
+      "linkUrl": null,
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 13,
-      "body": "PLACEHOLDER. A photo for you.",
+      "body": "Slide it open. Cold air at last. Winter is on its way.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-13.svg",
       "source": "manual"
     },
     {
       "number": 14,
-      "body": "PLACEHOLDER. Snow on the thatch for the first time.",
-      "linkUrl": "https://example.com/gift-14",
+      "body": "Draw the curtain back. You are exactly where you should be.",
+      "linkUrl": "https://en.wikipedia.org/wiki/Vallam_kali",
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 15,
-      "body": "PLACEHOLDER. Hold the cup with both hands.",
+      "body": "Every drawer holds something you forgot you loved.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-15.svg",
       "source": "manual"
     },
     {
       "number": 16,
-      "body": "PLACEHOLDER. The ice is thicker today.",
-      "linkUrl": "https://example.com/gift-16",
+      "body": "A little shelf to rest your cup on. Sit here for a moment.",
+      "linkUrl": null,
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 17,
-      "body": "PLACEHOLDER. Another lantern goes up along the rail.",
-      "linkUrl": "https://example.com/gift-17",
+      "body": "Whichever way you turn, you will find your way home.",
+      "linkUrl": null,
       "photoPath": "/placeholders/gift-17.svg",
       "source": "manual"
     },
     {
       "number": 18,
-      "body": "PLACEHOLDER. The water is frozen solid. The boat is locked in.",
-      "linkUrl": "https://example.com/gift-18",
+      "body": "A secret way down. There is always one more room than you expect.",
+      "linkUrl": null,
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 19,
-      "body": "PLACEHOLDER. Something is pushing up through the ice.",
+      "body": "Step out onto the upper deck. Look how far you can see.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-19.svg",
       "source": "manual"
     },
     {
       "number": 20,
-      "body": "PLACEHOLDER. Little trees, all in a row.",
-      "linkUrl": "https://example.com/gift-20",
+      "body": "Slide the shutter aside. The mist is lifting.",
+      "linkUrl": "https://en.wikipedia.org/wiki/Christmas_star",
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 21,
-      "body": "PLACEHOLDER. Snow keeps falling, softly.",
+      "body": "Cracked open on a cold night. Sweet, and unexpected.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-21.svg",
       "source": "manual"
     },
     {
       "number": 22,
-      "body": "PLACEHOLDER. Nearly there. Look back at how far you have come.",
+      "body": "A little boat, just big enough for a secret. Here it is.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-22.svg",
+      "photoPath": null,
       "source": "manual"
     },
     {
       "number": 23,
-      "body": "PLACEHOLDER. One more door. Be still for a minute.",
-      "linkUrl": "https://example.com/gift-23",
+      "body": "A message in a bottle: this was written for you, {name}, long before you opened it.",
+      "linkUrl": "https://en.wikipedia.org/wiki/Star_of_Bethlehem",
       "photoPath": null,
       "source": "manual"
     },
     {
       "number": 24,
-      "body": "PLACEHOLDER. The star is lit. Thank you for opening every door.",
+      "body": "The star is lit. Thank you for opening every door. Merry Christmas, {name}.",
       "linkUrl": null,
       "photoPath": "/placeholders/gift-24.svg",
       "source": "manual"

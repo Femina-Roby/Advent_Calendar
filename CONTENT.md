@@ -1,24 +1,31 @@
 # Premade calendar: what I need from you
 
-Fill this in (in this file, a doc, or a message, any form is fine) and send it back with the photo files.
-Everything currently in the premade calendar is placeholder text, example links and generated pictures.
+## At a glance
 
-## The whole calendar
+| What | How many | Required? |
+|---|---:|---|
+| **Messages** (one per door) | **24** | Yes, every door needs one |
+| **Closing note** (shown after door 24) | **1** | Yes |
+| **Photos** | **12** recommended (any number from 0 to 24) | No |
+| **Links** | **6** recommended (any number from 0 to 24) | No |
+| Title under the name | 1 | No |
 
-| | Your answer |
-|---|---|
-| Who is it for? (the name on the first screen: "A calendar for ___") | |
-| Title (optional, shown under the name) | |
-| Closing note, shown after the last door | |
+So the minimum is **25 pieces of writing** (24 messages and the closing note). With the recommended mix you also send
+**12 photos** and **6 links**. That mix is what the site is built with now:
+
+- **12 doors with a photo.** It floats out of the object as a polaroid.
+- **6 doors with a link.** It floats out as a sealed envelope.
+- **6 doors with words only.** They give a wrapped present.
+
+A door can have a photo *and* a link too. Then it shows the photo, and the letter offers the link as well.
+
+## About names
+
+The premade calendar asks whoever opens it for their name, so the first screen reads "A calendar for ___" with their own
+name. In any message you can write `{name}` and it becomes their name, for example *"Welcome aboard, {name}."*
+You do not send me a recipient name for the premade calendar.
 
 ## The 24 doors
-
-Each door is a different object on the boat. For every door:
-
-- **Message** is required. Up to 600 characters. English, Malayalam or Manglish all work.
-- **Photo** is optional. A picture file. It floats out of the object as a polaroid.
-- **Link** is optional. A song, video, page, anything starting with `https://`. It floats out as a sealed envelope.
-  A door with both shows the photo, and the letter offers the link as well.
 
 | # | Object | How it opens | Message | Photo file | Link |
 |--:|---|---|---|---|---|
@@ -49,8 +56,8 @@ Each door is a different object on the boat. For every door:
 
 ## Good to know
 
-- **A good mix** is about 10 to 14 photos, 5 to 8 links, and a few doors with words only. A door with words only gives a wrapped present.
-- **Door order matters.** Doors open strictly 1 to 24, and the scene turns from a warm backwater night into a snowy, lantern-lit Christmas as they open, so the later doors land in winter. Put your most special message on 24, and a gentle one on 1.
+- **Messages:** up to 600 characters each. English, Malayalam or Manglish all work.
 - **Photos:** JPG or PNG, any size (they are resized to about 1280 px). Name them `door-01.jpg` to `door-24.jpg` so I can match them without guessing.
-- **Links:** make sure they open on a phone. A song on a streaming site or a YouTube link works well.
-- **Anything that is not yours to share** (someone else's photo, a private link) should stay out. The calendar will be public.
+- **Links:** a full `https://…` address that opens on a phone, such as a song or a video.
+- **Order matters.** Doors open strictly 1 to 24, and the scene turns from a warm backwater night into a snowy, lantern-lit Christmas as they open, so the later doors land in winter. Put your most special message on door 24, and a gentle one on door 1.
+- **Anything that is not yours to share** (someone else's photo, a private link) should stay out. The calendar is public.

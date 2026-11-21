@@ -1,6 +1,14 @@
 // All user-facing strings live here so tone can be edited in one place.
 export const copy = {
   appName: "Kettuvallam Advent",
+  /** The opening screen of the site: a short note on what this is and why it exists. Edit freely. */
+  prologue: {
+    eyebrow: "Before you begin",
+    body: "Some things are worth waiting for, and the waiting can be a gift in itself. An advent calendar is that idea in twenty-four small doors: one kindness at a time, until the day arrives. I made this overnight on the Alappuzha backwaters, with a boat, a night and a great deal of light, for the people I love. ",
+    closing: "Open a door. Take your time. Someone was thinking of you.",
+    skip: "Skip",
+    enter: "Enter",
+  },
   intro: {
     title: (name: string) => `A calendar for ${name}`,
     eyebrow: "Twenty-four doors",

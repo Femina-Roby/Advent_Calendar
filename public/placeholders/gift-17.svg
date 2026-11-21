@@ -4,6 +4,4 @@
     <polygon points="320,170 220,330 420,330" fill="#2d8a55"/><polygon points="320,240 190,420 450,420" fill="#2d8a55"/><polygon points="320,320 160,500 480,500" fill="#2d8a55"/>
     <circle cx="320" cy="260" r="9" fill="#ff5a4a"/><circle cx="280" cy="330" r="9" fill="#ffd27a"/><circle cx="360" cy="345" r="9" fill="#6ab7ff"/><circle cx="250" cy="420" r="9" fill="#ffd27a"/><circle cx="330" cy="410" r="9" fill="#ff5a4a"/><circle cx="400" cy="440" r="9" fill="#9dff9a"/><circle cx="220" cy="480" r="9" fill="#6ab7ff"/><circle cx="320" cy="485" r="9" fill="#ffd27a"/><circle cx="420" cy="485" r="9" fill="#ff5a4a"/>
     <polygon points="320.0,116.0 325.5,136.8 344.0,126.0 333.2,144.5 354.0,150.0 333.2,155.5 344.0,174.0 325.5,163.2 320.0,184.0 314.5,163.2 296.0,174.0 306.8,155.5 286.0,150.0 306.8,144.5 296.0,126.0 314.5,136.8" fill="#ffd27a" stroke="#7a5a3a" stroke-width="3" stroke-linejoin="round"/>
-  <rect x="0" y="580" width="640" height="60" fill="#000" opacity=".28"/>
-  <text x="320" y="619" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f6eedc">Placeholder photo 17</text>
 </svg>
