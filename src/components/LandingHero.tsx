@@ -10,13 +10,16 @@ import SceneLoader from "./scene/SceneLoader";
 
 const noop = () => {};
 
+// The backdrop is only for looking at, so it never loads the door photos.
+const backdropDoors = premade.doors.map((d) => ({ ...d, photoPath: null, linkUrl: null }));
+
 /** The landing page: the real boat, turning slowly in its finished winter state, with the invitation over it. */
 export function LandingHero() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-night">
       <Prologue />
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <SceneLoader progress={24} opened={24} onGiftClick={noop} doors={premade.doors} decorative />
+        <SceneLoader progress={24} opened={24} onGiftClick={noop} doors={backdropDoors} decorative />
       </div>
       <div
         className="absolute inset-0"
