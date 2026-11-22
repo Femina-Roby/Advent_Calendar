@@ -12,6 +12,8 @@ type Props = {
   body: string;
   linkUrl?: string | null;
   photoUrl?: string | null;
+  /** Printed on the polaroid's white border. */
+  caption?: string | null;
   onClose: () => void;
 };
 
@@ -24,7 +26,7 @@ const host = (url: string) => {
 };
 
 /** A letter: warm paper, set in serif. A side sheet on desktop, a bottom sheet on a phone. Esc closes it. */
-export function DoorPanel({ number, label, body, linkUrl, photoUrl, onClose }: Props) {
+export function DoorPanel({ number, label, body, linkUrl, photoUrl, caption, onClose }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -74,7 +76,8 @@ export function DoorPanel({ number, label, body, linkUrl, photoUrl, onClose }: P
             className="absolute -top-3 left-1/2 h-6 w-20 -translate-x-1/2 rotate-[2deg] bg-[#e2b862]/55 shadow-sm"
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={photoUrl} alt={`Photo for door ${number}`} className="max-h-72 w-full object-cover" />
+          <img src={photoUrl} alt={caption ? `${caption}` : `Photo for door ${number}`} className="max-h-80 w-full object-cover" />
+          {caption ? <figcaption className="absolute inset-x-3 bottom-2.5 text-center font-serif text-[0.78rem] leading-tight text-paper-dim italic">{caption}</figcaption> : null}
         </figure>
       ) : null}
 

@@ -50,7 +50,9 @@ Fonts: Inter and Fraunces (SIL Open Font License), bundled locally.
 
 Textures and sky lighting from [Poly Haven](https://polyhaven.com) (CC0), bundled locally in `public/assets`: Brown Planks 04, Reed Roof 03, Snow 02, Bamboo Wall, and the Kiara 9 Dusk HDRI.
 
-Any third-party 3D model credits are listed here when added.
+Paintings (all public domain, from Wikimedia Commons): Vincent van Gogh, *Starry Night Over the Rhône*; Johannes Vermeer, *The Milkmaid* and *Girl Reading a Letter at an Open Window*; Katsushika Hokusai, *The Great Wave off Kanagawa*; Caspar David Friedrich, *Woman at a Window* and *Wanderer above the Sea of Fog*.
+
+The personal photographs in the premade calendar belong to its author.
 
 ## Privacy
 

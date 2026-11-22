@@ -10,5 +10,6 @@ export function templateDoors(recipientName: string): Door[] {
     linkUrl: null,
     photoPath: null,
     source: "template" as const,
+    caption: null,
   }));
 }

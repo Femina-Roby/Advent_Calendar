@@ -209,6 +209,7 @@ export function Opener({ calendar, askName = false }: { calendar: PublicCalendar
               body={say(door.body)}
               linkUrl={door.linkUrl}
               photoUrl={photoUrl(door.photoPath)}
+              caption={door.caption}
               onClose={() => setViewing(null)}
             />
           ) : null}

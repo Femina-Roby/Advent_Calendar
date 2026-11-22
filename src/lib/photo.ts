@@ -2,7 +2,7 @@
 // that someone has tampered with can never make the page load an arbitrary address.
 //   local:<id>                  a photo saved on this device only
 //   <random>/<name>.webp        a photo in the online `door-photos` bucket
-//   /placeholders/<file>        a picture bundled with the site (the premade calendar)
+//   /premade/<file>             a picture bundled with the site (the premade calendar)
 export type PhotoRef =
   | { kind: "local"; id: string }
   | { kind: "remote"; path: string }
@@ -10,7 +10,7 @@ export type PhotoRef =
 
 const LOCAL = /^local:([A-Za-z0-9_-]{6,40})$/;
 const REMOTE = /^[A-Za-z0-9_-]{6,40}\/[A-Za-z0-9_-]{1,40}\.(?:webp|jpg|jpeg|png)$/;
-const STATIC = /^\/placeholders\/[A-Za-z0-9_.-]{1,60}$/;
+const STATIC = /^\/premade\/[A-Za-z0-9_.-]{1,60}$/;
 
 export function parsePhotoRef(ref: string | null | undefined): PhotoRef | null {
   if (!ref) return null;

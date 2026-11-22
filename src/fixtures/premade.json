@@ -2,178 +2,202 @@
   "slug": "premade",
   "title": "Christmas on a Houseboat",
   "recipientName": "Femina",
-  "closingNote": "Every door is open, {name}. The water has frozen, the lanterns are glowing, and the star is lit. Merry Christmas.",
+  "closingNote": "Every door is open, {name}. The water has frozen, the lanterns are glowing and the star is lit. Thank you for spending a little of December with me. Merry Christmas. Femina",
   "occasion": "Christmas",
   "theme": "kettuvallam",
   "language": "en",
   "doors": [
     {
       "number": 1,
-      "body": "Welcome aboard, {name}. The backwaters are warm tonight, and every lantern is lit for you.",
+      "body": "Welcome aboard, {name}. I wanted you to begin the way I like to begin things: at night, near water, with the lights on. Van Gogh painted this one standing by a river, and I have tried to build the same feeling here.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-01.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-01.jpg",
+      "source": "manual",
+      "caption": "Vincent van Gogh, Starry Night Over the Rhône, 1888"
     },
     {
       "number": 2,
-      "body": "Open the shutters and look out. The palms lean over the water as if they were listening.",
-      "linkUrl": "https://en.wikipedia.org/wiki/Alappuzha",
+      "body": "Open the shutters and let some music in. If I could hand you my headphones right now, this is what I would put on. Look out at the water while it plays.",
+      "linkUrl": "https://open.spotify.com/playlist/37i9dQZF1DX4sWSpwq3LiO",
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 3,
-      "body": "Tea is better when the water is still. Pour a cup and stay a while.",
+      "body": "Tea first, everything else after. Vermeer gave a whole painting to someone pouring milk, and it is one of the calmest things anyone has ever made. Pour something warm, {name}, and take your time with it.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-03.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-03.jpg",
+      "source": "manual",
+      "caption": "Johannes Vermeer, The Milkmaid, c. 1660"
     },
     {
       "number": 4,
-      "body": "One small light is enough to find your way. This one is yours.",
+      "body": "That is me, standing very straight in a very grand hallway, with two lamps glowing behind me like they were guarding the place. I look like I am waiting for someone to say I can relax now. Consider this that someone: you can relax now, {name}.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-04.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-04.jpg",
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 5,
-      "body": "Some things are kept for exactly the right moment. This was one of them.",
+      "body": "Some things are kept for the right moment. This is me in my best dress, bangles stacked up my arm, headband perfectly in place, looking very sure about the whole situation. I am sharing it with you, which is my way of saying I trust you with it.",
       "linkUrl": null,
-      "photoPath": null,
-      "source": "manual"
+      "photoPath": "/premade/door-05.jpg",
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 6,
-      "body": "If the world ever feels too deep, hold on to the people who would swim out to you.",
+      "body": "If the world ever feels like this, hold on to the people who would swim out after you. Mine know who they are, and yours do too, even on the days you forget. And look how small the mountain is behind the wave. Big things pass.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-06.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-06.jpg",
+      "source": "manual",
+      "caption": "Katsushika Hokusai, The Great Wave off Kanagawa, c. 1831"
     },
     {
       "number": 7,
-      "body": "Roll the blind up. The evening has changed colour while you were busy.",
-      "linkUrl": "https://en.wikipedia.org/wiki/Kettuvallam",
+      "body": "Roll the blind up. The light has gone blue, which is the right time of day for a short story. This one is about two people who each give up the thing they love most to buy the other a gift. It takes about ten minutes, and it is the best case I know for giving the thoughtful thing over the expensive one.",
+      "linkUrl": "https://en.wikisource.org/wiki/The_Gift_of_the_Magi",
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 8,
-      "body": "A letter, just for you. It says what it always says: I am glad you exist.",
+      "body": "A letter, for you. I cannot see what it says either, but look at her face: whatever is written there, she is glad it came. That is all I am trying to say with this whole calendar, {name}. I am glad it came to you.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-08.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-08.jpg",
+      "source": "manual",
+      "caption": "Johannes Vermeer, Girl Reading a Letter at an Open Window, c. 1657"
     },
     {
       "number": 9,
-      "body": "Something warm from the kitchen. It smells like home, doesn't it?",
+      "body": "Something is cooking behind this hatch and I am not telling you what. Home smells different to everyone. For some people it is onions slowly turning gold, for others it is cardamom, or a pressure cooker whistling in the next room. What does yours smell like?",
       "linkUrl": null,
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 10,
-      "body": "Lift the lid. Steam, and the first good thing of the week.",
-      "linkUrl": "https://en.wikipedia.org/wiki/Christmas_in_India",
+      "body": "Lift the lid. If you were in my kitchen tonight, this is what I would make you: a warm vegetable stew with coconut milk, and appam to mop it up. It is the kind of food that turns a cold evening into something you chose on purpose. Make it for someone, or for yourself. Both count.",
+      "linkUrl": "https://www.vegrecipesofindia.com/kerala-vegetable-stew-recipe/",
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 11,
-      "body": "A basket of small joys. Take one now and save the rest.",
+      "body": "A basket of small things that were good today: a warm cup, a text that made you laugh, a song you did not skip. Count yours before you sleep. There are more than three, I promise.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-11.svg",
-      "source": "manual"
+      "photoPath": null,
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 12,
-      "body": "Cast a net wide enough and the day brings something kind.",
+      "body": "Throw the net out wide. Most of what I miss, it turns out, was ordinary: a Tuesday, a doorway, someone asking if I had eaten. Pay attention to today, {name}. It will be a good one to remember.",
       "linkUrl": null,
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 13,
-      "body": "Slide it open. Cold air at last. Winter is on its way.",
+      "body": "Slide it open. She has stood at that window for two hundred years and we still do not know what she is looking at. I like that. Some views are better when nobody tells you what they are. Take a minute with yours.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-13.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-13.jpg",
+      "source": "manual",
+      "caption": "Caspar David Friedrich, Woman at a Window, 1822"
     },
     {
       "number": 14,
-      "body": "Draw the curtain back. You are exactly where you should be.",
-      "linkUrl": "https://en.wikipedia.org/wiki/Vallam_kali",
+      "body": "Draw the curtain back and listen. Longfellow wrote this poem during a terrible year, and it still ends with the bells ringing louder. If you are in a hard stretch right now, read the last verse twice.",
+      "linkUrl": "https://poets.org/poem/christmas-bells",
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 15,
-      "body": "Every drawer holds something you forgot you loved.",
+      "body": "Every drawer has something you forgot you loved. This one came out of an old photo album: me on a bed, hair in a tiny topknot with a clip holding on for dear life, grinning like I had just got away with something. I would like some of that confidence back. Maybe you would too.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-15.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-15.jpg",
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 16,
-      "body": "A little shelf to rest your cup on. Sit here for a moment.",
+      "body": "A little shelf for the photographs. These are all me too, in different years: the serious one, the one in the red dress, the one who had just discovered smiling with teeth. If anyone ever tells you the person you used to be does not count, show them this shelf.",
       "linkUrl": null,
-      "photoPath": null,
-      "source": "manual"
+      "photoPath": "/premade/door-16.jpg",
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 17,
-      "body": "Whichever way you turn, you will find your way home.",
+      "body": "Whichever way you turn tonight, you are facing somewhere you have not been before. I find that frightening and exciting in about equal parts. Know that there is always a way back to the people who love you, {name}. This compass has never pointed anywhere else.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-17.svg",
-      "source": "manual"
+      "photoPath": null,
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 18,
-      "body": "A secret way down. There is always one more room than you expect.",
+      "body": "Every boat has a trapdoor, and nobody mentions it until you find it. Down there is where the spare blankets live. Wherever you are right now, there is something tucked away that will keep you warm. Go and look for it.",
       "linkUrl": null,
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 19,
-      "body": "Step out onto the upper deck. Look how far you can see.",
+      "body": "Step out onto the upper deck. This is the view I wish you: standing somewhere high, the fog lying below you, nothing in the way. You earned the climb, including the parts nobody saw.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-19.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-19.jpg",
+      "source": "manual",
+      "caption": "Caspar David Friedrich, Wanderer above the Sea of Fog, c. 1818"
     },
     {
       "number": 20,
-      "body": "Slide the shutter aside. The mist is lifting.",
-      "linkUrl": "https://en.wikipedia.org/wiki/Christmas_star",
+      "body": "Slide the shutter aside. The mist is lifting and somewhere across the water someone is singing. Here are some Malayalam carols, because Christmas sounds best in the language of the place that is celebrating it. Turn it up a little.",
+      "linkUrl": "https://saregama.com/album/christmas-songs-malayalam_115316",
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 21,
-      "body": "Cracked open on a cold night. Sweet, and unexpected.",
+      "body": "Crack one open on a cold night and it still tastes like summer. Keep a little of that for yourself: whatever your version of summer is, carry one small piece of it with you all through the winter.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-21.svg",
-      "source": "manual"
+      "photoPath": null,
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 22,
-      "body": "A little boat, just big enough for a secret. Here it is.",
+      "body": "Here is a place I would put you if I could: the sky going orange, little boats out on the water, people walking home slowly like they have nowhere else to be. Everyone in this picture looks exactly where they are supposed to be. So do you.",
       "linkUrl": null,
-      "photoPath": null,
-      "source": "manual"
+      "photoPath": "/premade/door-22.jpg",
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 23,
-      "body": "A message in a bottle: this was written for you, {name}, long before you opened it.",
-      "linkUrl": "https://en.wikipedia.org/wiki/Star_of_Bethlehem",
+      "body": "A message in a bottle, and this bottle is real: write a letter to yourself and this site will deliver it back to you in a year. Tell future you what this December felt like. I would love to know what you say, {name}.",
+      "linkUrl": "https://www.futureme.org/",
       "photoPath": null,
-      "source": "manual"
+      "source": "manual",
+      "caption": null
     },
     {
       "number": 24,
-      "body": "The star is lit. Thank you for opening every door. Merry Christmas, {name}.",
+      "body": "This is me, now, in my reddest sweater. Every door in this calendar was either something I wanted you to know about me or something I wanted for you. Thank you for opening all twenty-four, {name}. Merry Christmas. The star is yours.",
       "linkUrl": null,
-      "photoPath": "/placeholders/gift-24.svg",
-      "source": "manual"
+      "photoPath": "/premade/door-24.jpg",
+      "source": "manual",
+      "caption": null
     }
   ]
 }

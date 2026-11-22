@@ -25,6 +25,8 @@ export const doorSchema = z.object({
   /** Path inside the `door-photos` bucket. Build a URL with `photoUrl()` in lib/storage. */
   photoPath: z.string().max(300).nullable().default(null),
   source: doorSource.default("manual"),
+  /** A line under the picture, such as the painter and the painting. */
+  caption: z.string().trim().max(160).nullable().default(null),
 });
 
 /**
